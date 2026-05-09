@@ -5,15 +5,15 @@ export default function Home() {
   return (
     <div className="min-h-screen bg-[#fafafa] text-zinc-900 font-sans selection:bg-emerald-100 selection:text-emerald-900 overflow-x-hidden">
       {/* Navigation */}
-      <nav className="fixed top-0 w-full z-[100] bg-white/70 backdrop-blur-xl border-b border-zinc-200/50">
+      <nav className="fixed top-0 w-full z-100 bg-white/70 backdrop-blur-xl border-b border-zinc-200/50">
         <div className="max-w-7xl mx-auto px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-2 group cursor-pointer">
-            <div className="w-9 h-9 bg-gradient-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-200 group-hover:scale-110 transition-transform">
+            <div className="w-9 h-9 bg-linear-to-br from-emerald-400 to-emerald-600 rounded-xl flex items-center justify-center shadow-lg shadow-emerald-200 group-hover:scale-110 transition-transform">
               <svg className="w-5 h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2.5} d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z" />
               </svg>
             </div>
-            <span className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-zinc-900 to-zinc-600">MsgFlow</span>
+            <span className="text-xl font-black tracking-tight bg-clip-text text-transparent bg-linear-to-r from-zinc-900 to-zinc-600">MsgFlow</span>
           </div>
           <div className="hidden md:flex items-center gap-10 text-sm font-semibold text-zinc-500">
             {["Features", "Solutions", "API", "Pricing"].map((item) => (
@@ -35,7 +35,7 @@ export default function Home() {
       <main>
         {/* Hero Section */}
         <section className="relative pt-40 pb-24 px-6 overflow-hidden">
-          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-gradient-to-b from-emerald-50/50 to-transparent -z-10 rounded-full blur-3xl opacity-50"></div>
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[1000px] h-[600px] bg-linear-to-b from-emerald-50/50 to-transparent -z-10 rounded-full blur-3xl opacity-50"></div>
           <div className="absolute -top-24 -right-24 w-96 h-96 bg-emerald-200/20 rounded-full blur-[100px] -z-10"></div>
           
           <div className="max-w-7xl mx-auto grid lg:grid-cols-2 gap-16 items-center">
@@ -78,7 +78,7 @@ export default function Home() {
 
             <div className="relative group lg:ml-12">
               <div className="absolute -inset-4 bg-emerald-500/20 blur-2xl rounded-[3rem] group-hover:bg-emerald-500/30 transition-all duration-500"></div>
-              <div className="relative bg-white border border-zinc-200/50 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden aspect-[4/5] flex items-center justify-center">
+              <div className="relative bg-white border border-zinc-200/50 rounded-[2.5rem] shadow-[0_20px_50px_rgba(0,0,0,0.05)] overflow-hidden aspect-4/5 flex items-center justify-center">
                  {/* AI Generated Phone Mockup Image */}
                  <div className="absolute inset-0 z-0">
                     <Image 
@@ -152,7 +152,7 @@ export default function Home() {
                 }
               ].map((feature, i) => (
                 <div key={i} className="group relative">
-                  <div className={`absolute inset-0 bg-gradient-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-[2.5rem] blur-xl -z-10 scale-90 group-hover:scale-100`}></div>
+                  <div className={`absolute inset-0 bg-linear-to-br ${feature.color} opacity-0 group-hover:opacity-100 transition-all duration-500 rounded-[2.5rem] blur-xl -z-10 scale-90 group-hover:scale-100`}></div>
                   <div className="bg-white border border-zinc-100 p-10 rounded-[2.5rem] h-full transition-all duration-500 group-hover:-translate-y-2 flex flex-col">
                     <div className={`w-14 h-14 rounded-2xl flex items-center justify-center mb-8 shadow-inner ${feature.bg}`}>
                       <svg className="w-7 h-7 text-zinc-900" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -160,7 +160,7 @@ export default function Home() {
                       </svg>
                     </div>
                     <h3 className="text-2xl font-black mb-4">{feature.title}</h3>
-                    <p className="text-zinc-500 font-medium leading-relaxed mb-10 flex-grow">{feature.desc}</p>
+                    <p className="text-zinc-500 font-medium leading-relaxed mb-10 grow">{feature.desc}</p>
                     <div className="flex items-center gap-2 font-bold text-zinc-900">
                       <span>Explore {feature.title}</span>
                       <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -177,14 +177,14 @@ export default function Home() {
         {/* Product Showcase - AI Generated Image */}
         <section className="py-32 bg-white">
           <div className="max-w-7xl mx-auto px-6">
-            <div className="relative rounded-[3rem] overflow-hidden aspect-[21/9] shadow-2xl group border border-zinc-100">
+            <div className="relative rounded-[3rem] overflow-hidden aspect-21/9 shadow-2xl group border border-zinc-100">
               <Image 
                 src="/platform_mockup.png" 
                 alt="Platform Showcase" 
                 fill
                 className="object-cover group-hover:scale-105 transition-transform duration-1000"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-zinc-900/80 via-transparent to-transparent flex flex-col justify-end p-16">
+              <div className="absolute inset-0 bg-linear-to-t from-zinc-900/80 via-transparent to-transparent flex flex-col justify-end p-16">
                 <div className="max-w-2xl space-y-4">
                   <h3 className="text-4xl font-black text-white">Full Analytics Dashboard</h3>
                   <p className="text-lg text-zinc-300 font-medium">Monitor delivery rates, engagement metrics, and campaign performance in real-time with our unified dashboard.</p>
@@ -272,17 +272,17 @@ export default function Home() {
 
         {/* CTA Section */}
         <section className="py-40 px-6 relative bg-white overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:32px_32px] opacity-25"></div>
+          <div className="absolute inset-0 bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] bg-size-[32px_32px] opacity-25"></div>
           <div className="max-w-5xl mx-auto text-center relative z-10 space-y-12">
             <h2 className="text-7xl lg:text-9xl font-black tracking-tight leading-[0.8] mb-4">
               Stop waiting. <br />
               <span className="text-emerald-500 italic">Start sending.</span>
             </h2>
             <div className="flex flex-col sm:flex-row gap-6 justify-center pt-8">
-               <button className="bg-zinc-900 text-white px-12 py-6 rounded-[2rem] font-black text-xl hover:bg-emerald-600 transition-all hover:shadow-[0_20px_50px_rgba(16,185,129,0.3)] active:scale-95">
+               <button className="bg-zinc-900 text-white px-12 py-6 rounded-4xl font-black text-xl hover:bg-emerald-600 transition-all hover:shadow-[0_20px_50px_rgba(16,185,129,0.3)] active:scale-95">
                  Create Free Account
                </button>
-               <button className="bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-6 rounded-[2rem] font-black text-xl hover:border-zinc-900 transition-all active:scale-95">
+               <button className="bg-white text-zinc-900 border-2 border-zinc-200 px-12 py-6 rounded-4xl font-black text-xl hover:border-zinc-900 transition-all active:scale-95">
                  Contact Sales
                </button>
             </div>
